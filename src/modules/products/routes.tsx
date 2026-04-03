@@ -1,15 +1,15 @@
 import { MainLayout } from "../../ui/layouts/MainLayout";
-import { SitesPage } from "./presentation/pages/SitesPage";
+import { ProductsPage } from "./presentation/pages/ProductsPage";
 import type { PathRoute } from "../../shared/types/path-routes.interface";
 
-export const sitesRoutes: PathRoute[] = [
+export const productsRoutes: PathRoute[] = [
   {
-    path: "/sites",
+    path: "/products",
     element: <MainLayout />,
     children: [
       {
         path: "",
-        element: <SitesPage />,
+        element: <ProductsPage />,
       },
     ],
   },

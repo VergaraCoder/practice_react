@@ -1,8 +1,7 @@
 import type { ReactNode } from "react";
 
-
-
 export interface PathRoute {
-    path:string;
-    element : ReactNode;
-};
+  path: string;
+  element: ReactNode;
+  children?: PathRoute[];
+}

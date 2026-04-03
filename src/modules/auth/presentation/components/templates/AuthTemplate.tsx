@@ -8,7 +8,7 @@ interface AuthTemplateProps{
 export const AuthTemplate = ({children}:AuthTemplateProps) => {
 
     return (
-        <div className="containerTemplate">
+        <div className="container_template">
             {children}
         </div>
     );
