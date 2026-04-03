@@ -4,30 +4,27 @@ import { RegisterPage } from "./presentation/pages/RegisterPage";
 import { VerifyEmailPage } from "./presentation/pages/VerifyEmailPage";
 import type { PathRoute } from "../../shared/types/path-routes.interface";
 import { AuthLayout } from "../../ui/layouts/AuthLayout";
+import { AUTH_ROUTES } from "./paths";
 
 export const authRoutes: PathRoute[] = [
   {
-    path: "/auth",
+    path: "",
     element: <AuthLayout />,
     children: [
       {
-        path: "",
+        path: AUTH_ROUTES.ROOT,
         element: <AuthPage />,
-      },
-      {
-        path: "login",
-        element: <LoginPage />,
-      },
-      {
-        path: "register",
-        element: <RegisterPage />,
         children: [
           {
             path: "verify-email",
             element: <VerifyEmailPage />,
           },
-        ],
-      },
+        ]
+      }
     ],
+  },
+  {
+    path: AUTH_ROUTES.LOGIN,
+    element: <LoginPage />,
   },
 ];

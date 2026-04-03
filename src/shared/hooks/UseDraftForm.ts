@@ -20,18 +20,5 @@ export function useDraftForm<T extends FieldValues>({
     ...formOptions,
   });
 
-  const {
-    handleSubmit,
-    reset,
-    formState: { isSubmitting, isValid, errors },
-  } = methods;
-
-  return {
-    ...methods,
-    submit: handleSubmit,
-    resetForm: () => reset(defaultValues),
-    isSubmitting,
-    isValid,
-    errors,
-  };
+  return methods;
 }
