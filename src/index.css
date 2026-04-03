@@ -109,3 +109,13 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+
+.containerTemplate{
+  width: 80%;
+  background-color: red;
+}
+
+.containerFirstSection{
+  display: flex;
+}
